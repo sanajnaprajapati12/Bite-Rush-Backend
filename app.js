@@ -16,7 +16,7 @@ app.use(cookieParser()); // ✅ this makes req.cookies available
 // ✅ CORS should be at the top
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: process.env.FRONT_END_URL,
     credentials: true, // Optional but recommended if using cookies
   })
 );
